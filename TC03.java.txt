@@ -1,0 +1,30 @@
+package listbox;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
+
+import com.vel.config.Configurations;
+
+public class ListBox2 {
+public static void main(String[] args) {
+	
+	System.setProperty("webdriver.chrome.driver", Configurations.driverPath);
+	WebDriver driver = new ChromeDriver();	
+	driver.get(Configurations.appURL);
+	driver.manage().window().maximize();
+	
+	 WebElement year = driver.findElement(By.xpath("//Select[@name='birthday_year']"));
+	
+	Select s1 = new Select(year);
+	//single or multi selectable	
+	System.out.println(s1.isMultiple());
+	
+	//get selected option
+     String firstValue = s1.getFirstSelectedOption().getText();
+	System.out.println(firstValue);
+	
+}
+}

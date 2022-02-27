@@ -1,0 +1,29 @@
+package stringClass1;
+
+public class Sample {
+	
+	public static void main(String[] args) {
+
+    String s1="Velocitye";    
+   
+    
+   System.out.println(s1.toUpperCase());     
+   System.out.println(s1.toLowerCase());     
+    
+    System.out.println(s1.indexOf("e"));        
+    
+    System.out.println(s1.charAt(6));			
+    
+    System.out.println(s1.startsWith("Vel"));      
+    
+    System.out.println(s1.endsWith("tyy"));      
+    
+    System.out.println(s1.lastIndexOf("e"));     
+    
+    System.out.println(s1.length());             	
+    
+		
+	} 
+
+}
+
